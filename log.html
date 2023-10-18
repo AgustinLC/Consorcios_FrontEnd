@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ejemplo de formulario de acceso basado en HTML5 y CSS">
+  <meta name="keywords" content="login,formulario de acceso html">
+
+  <title>Registro de Usuario</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/log.css">
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e2333fa6d2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container__header">
+      <div class="logo">
+        <img src="assets/images/water_drop_white_24dp.svg" alt="logo" class="logo-img light" />
+        <img src="assets/images/water_drop_sky.svg" alt="logo" class="logo-img dark" />
+
+        <p>
+          Consorcio Vecinal de Agua Potable <br />
+          Santa Maria de Oro
+        </p>
+      </div>
+      <div class="container__nav">
+        <nav id="nav">
+          <ul>
+            <li><a href="#" class="select">Inicio</a></li>
+            <li>
+              <a href="#"><i class="fa-regular fa-bell"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-gear"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container_all" id="container__all">
+    <div class="cover">
+
+      <div class="bg_color"></div>
+      <div class="wave w1"></div>
+      <div class="wave w2"></div>
+
+      <section class="contenedor">
+        <div>
+
+          <div class="contenedorcentrado">
+            <div id="login">
+              <form id="loginform">
+                <label for="usuario">DNI/CUIT Del titular</label>
+                <input id="usuario" type="text" name="usuario" placeholder="DNI/CUIT" required>
+
+                <label for="password">Codigo De Cliente</label>
+                <input id="password" type="password" placeholder="Codigo" name="password" required>
+
+                <button type="submit" title="Ingresar" name="Ingresar">Iniciar</button>
+              </form>
+
+            </div>
+            <div id="derecho">
+              <div class="titulo">
+                Bienvenido
+              </div>
+              <hr>
+              <div class="pie-form">
+                <a href="#">¿Perdiste tu Codigo de Cliente?</a>
+                <hr>
+                <a href="#">« Volver</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer>
+      <div class="container__footer">
+        <div class="box__footer">
+          <div class="logo">
+            <img src="/assets/images/water_drop_sky.svg" alt="" />
+          </div>
+          <div class="terms">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+            reiciendis et quasi aut facere vitae vero. Inventore, minus ab
+            voluptate modi repellat, pariatur tempora quisquam, debitis
+            facilis explicabo voluptatem. A.
+          </div>
+        </div>
+
+        <div class="box__footer">
+          <h2>Dirección</h2>
+          <a href="#">Calle: XXXXX</a>
+          <a href="#">Departamento: Rivadavia</a>
+          <a href="#">Ciudad: XXXXXX</a>
+          <a href="#">Pais: XXXXXXX</a>
+        </div>
+
+        <div class="box__footer">
+          <h2>Compañia</h2>
+          <a href="#">Acercda de</a>
+          <a href="#">Trabajos</a>
+          <a href="#">Procesos</a>
+          <a href="#">Servicios</a>
+        </div>
+
+        <div class="box__footer">
+          <h2>Redes Sociales</h2>
+          <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i> X</a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+          <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+        </div>
+      </div>
+
+      <div class="box__copyright">
+        <hr />
+        <p>Todos los derechos reservados © 2023 <b>Consorcio Vecinal de Agua Potable
+            Santa Maria de Oro</b>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/index.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
