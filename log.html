@@ -38,9 +38,6 @@
             <li>
               <a href="#"><i class="fa-solid fa-gear"></i></a>
             </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-user"></i></a>
-            </li>
           </ul>
         </nav>
         <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -56,33 +53,27 @@
       <div class="wave w2"></div>
 
       <section class="contenedor">
-        <div>
-
-          <div class="contenedorcentrado">
-            <div id="login">
-              <form id="loginform">
-                <label for="usuario">DNI/CUIT Del titular</label>
-                <input id="usuario" type="text" name="usuario" placeholder="DNI/CUIT" required>
-
-                <label for="password">Codigo De Cliente</label>
-                <input id="password" type="password" placeholder="Codigo" name="password" required>
-
-                <button type="submit" title="Ingresar" name="Ingresar">Iniciar</button>
-              </form>
-
+        <div class="wrapper">
+          <form action="">
+            <h1>Bienvenido</h1>
+            <p class="inicio">Inicio Sesion</p>
+            <div class="input-box">
+              <input type="text" placeholder="DNI/CUIT" required>
+              <i class='bx bxs-user'></i>
             </div>
-            <div id="derecho">
-              <div class="titulo">
-                Bienvenido
-              </div>
-              <hr>
-              <div class="pie-form">
-                <a href="#">¿Perdiste tu Codigo de Cliente?</a>
-                <hr>
-                <a href="#">« Volver</a>
-              </div>
+            <div class="input-box">
+              <input type="password" placeholder="Codigo" required>
+              <i class='bx bxs-lock-alt' ></i>
             </div>
-          </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox">Recordar</label>
+              <a href="#">¿Olvidaste el Codigo?</a>
+            </div>
+            <button type="submit" class="btn">Iniciar</button>
+            <div class="register-link">
+              <p>No tienes cuenta? Contratanos <a href="#">Contratar</a></p>
+            </div>
+          </form>
         </div>
       </section>
 
