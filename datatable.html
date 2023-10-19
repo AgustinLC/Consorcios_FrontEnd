@@ -32,16 +32,18 @@
       <div class="container__nav">
         <nav id="nav">
           <ul>
-            <li><a href="./index.html" class="select">Inicio</a></li>
             <li>
-              <a href="#"><i class="fa-regular fa-bell"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-gear"></i></a>
-            </li>
-            <li>
-              <a href="./log.html"><i class="fa-solid fa-user"></i></a>
-            </li>
+              <a href="index.html">Inicio <i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+              <a href="FAQ.html">Preguntas frecuentes <i class="fa-solid fa-question"></i></a>
+          </li>
+          <li>
+              <a href="#">Notificaciones <i class="fa-solid fa-bell"></i></a>
+          </li>
+          <li>
+              <a href="./log.html">Iniciar sesión <i class="fa-solid fa-user"></i></a>
+          </li>
           </ul>
         </nav>
         <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
@@ -718,6 +720,62 @@
     src="https://cdn.datatables.net/v/bs5/dt-1.13.6/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/r-2.5.0/datatables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#example").dataTable({
+        responsive: true,
+        dom: "Bfrtip",
+        language: {
+          url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json",
+        },
+        buttons: [
+          {
+            extend: "copy",
+            text: "Copiar", // Cambia el nombre del botón a "Copiar"
+            className: "btn btn-warning", // Cambia el color del botón de copiar a azul
+          },
+          {
+            extend: "print",
+            text: "Imprimir", // Cambia el nombre del botón a "Imprimir"
+            className: "btn btn-success", // Cambia el color del botón de impresión a verde
+          },
+          {
+            extend: "pdf",
+            text: "PDF", // Cambia el nombre del botón a "PDF"
+            className: "btn btn-danger",
+          },
+        ],
+      });
+    });
+
+    $(document).ready(function () {
+      // Itera a través de todas las filas (tr) de la tabla
+      $("table tbody tr").each(function () {
+        // Encuentra todos los td en la fila actual
+        var tds = $(this).find("td");
+
+        // Variable para rastrear si todas las celdas están llenas
+        var todasLasCeldasLlenas = true;
+
+        // Itera a través de los td
+        tds.each(function () {
+          // Verifica si el td está vacío o contiene solo espacios en blanco
+          if ($(this).text().trim() === "") {
+            // Marca que al menos una celda no está llena
+            todasLasCeldasLlenas = false;
+            return false; // Sale del bucle each() de los td
+          }
+        });
+
+        // Si todas las celdas están llenas, agrega la clase 'table-warning' a la fila (tr) actual
+        if (todasLasCeldasLlenas) {
+          $(this).addClass("table-info");
+        } else {
+          $(this).addClass("table-warning");
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

@@ -3,8 +3,9 @@ window.onscroll = function () {
   header = document.getElementById("header");
   logoLight = document.querySelector(".logo-img.light");
   logoDark = document.querySelector(".logo-img.dark");
+  parrafoHeader = document.querySelector(".logo p")
 
-  if (scroll > 20) {
+  if (scroll > 0) {
     header.classList.add("nav_mod");
     logoLight.style.display = "none";
     logoDark.style.display = "block";
