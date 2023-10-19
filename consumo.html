@@ -12,7 +12,7 @@
     <!-- Estilos -->
     <link rel="stylesheet" href="assets/css/styles.css" />
     <!-- Título -->
-    <title>Consorcio Vecinal de Agua Potable</title>
+    <title>Graficos de Consumo</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <div class="container__nav">
                 <nav id="nav">
                     <ul>
-                        <li><a href="#" class="select">Inicio</a></li>
+                        <li><a href="./index.html" class="select">Inicio</a></li>
                         <li>
                             <a href="#"><i class="fa-regular fa-bell"></i></a>
                         </li>
@@ -45,40 +45,31 @@
         </div>
     </header>
 
+    <!-- Menú -->
     <div class="container_all" id="container__all">
-
-        <!-- Menú -->
         <div class="cover">
             <div class="bg_color"></div>
             <div class="wave w1"></div>
             <div class="wave w2"></div>
-            <section class="menu">
-                <a href="./resumen.html" class="menu-item" id="item_resumen">
-                    <div class="icon"><img src="assets/images/bx-line-chart.svg" alt="icon-line"></div>
-                    <div class="menu-title">
-                        <h4>Resumen de Cuenta</h4>
-                    </div>
-                </a>
-                <a href="./datatable.html" class="menu-item" id="item_facturas">
-                    <div class="icon"><img src="assets/images/bx-food-menu.svg" alt="icon-menu"></div>
-                    <div class="menu-title">
-                        <h4>Facturas</h4>
-                    </div>
-                </a>
-                <a href="./consumo.html" class="menu-item" id="item_consumo">
-                    <div class="icon"><img src="assets/images/bx-bar-chart.svg" alt="icon-barChart"></div>
-                    <div class="menu-title">
-                        <h4>Consumo</h4>
-                    </div>
-                </a>
-                <a href="./info.html" class="menu-item" id="item_tarifas">
-                    <div class="icon"><img src="assets/images/bx-message-detail.svg" alt="icon-sms"></div>
-                    <div class="menu-title">
-                        <h4>Tarifas y Políticas</h4>
-                    </div>
-                </a>
-            </section>
+            <div class="container__cover">
+                <div class="container__info">
+                    <h1>GRAFICO</h1>
+                    <h2>DE</h2>
+                    <h2>CONSUMO</h2>
+                    <p>
+                        En este apartado de la pagina, te mostraremos el consumo de agua
+                        que has tenido a lo largo de todo el año.
+                    </p>
+                    <a href="datatable.html" type="button"><button>Ver tus Facturas</button></a>
+                </div>
+                <div class="container__vector">
+                    <img src="assets/images/undraw_dark_analytics_re_2kvy.svg" alt="" />
+                </div>
+            </div>
         </div>
+
+        <!-- Grafico de Consumo -->
+        <canvas id="myChart"></canvas>
 
         <!-- Pie de página -->
         <footer>
@@ -163,6 +154,7 @@
         </div>
     </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="assets/js/index.js"></script>
 </body>
 
