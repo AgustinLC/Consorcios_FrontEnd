@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Íconos -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/e2333fa6d2.js" crossorigin="anonymous"></script>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://cdn.datatables.net/v/bs5/dt-1.13.6/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/r-2.5.0/datatables.min.css"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" />
+  <!-- Título -->
+  <title>Facturas | Consorcio</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container__header">
+      <div class="logo">
+        <img src="assets/images/water_drop_white_24dp.svg" alt="logo" class="logo-img light" />
+        <img src="assets/images/water_drop_sky.svg" alt="logo" class="logo-img dark" />
+        <p>Consorcio Vecinal de Agua Potable <br>
+          Santa Maria de Oro
+        </p>
+      </div>
+      <div class="container__nav">
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="index.html">Inicio <i class="fa-solid fa-house"></i></a>
+          </li>
+          <li>
+              <a href="FAQ.html">Preguntas frecuentes <i class="fa-solid fa-question"></i></a>
+          </li>
+          <li>
+              <a href="#">Notificaciones <i class="fa-solid fa-bell"></i></a>
+          </li>
+          <li>
+              <a href="./log.html">Iniciar sesión <i class="fa-solid fa-user"></i></a>
+          </li>
+          </ul>
+        </nav>
+        <div class="btn__menu" id="btn_menu"><i class="fas fa-bars"></i></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container_all" id="container__all">
+
+    <!-- Info -->
+    <div class="cover">
+      <div class="bg_color"></div>
+      <div class="wave w1"></div>
+      <div class="wave w2"></div>
+      <div class="container__cover">
+        <div class="container__info">
+          <h1>ENZO</h1>
+          <h2>BUSTAMANTE</h2>
+          <p>
+            En este apartado de la pagina, Se mostraran todas las facturas que
+            hay a tu nombre, como asi sus vencimentos, emision, importe,
+            consumo, pago, tarifa, periodo y vencimiento.
+          </p>
+          <a href="resumen.html" type="button"><button>Resumen de Cuenta</button></a>
+        </div>
+        <div class="container__vector">
+          <img src="assets/images/undraw_pair_programming_re_or4x.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Tables -->
+    <div class="main__table container py-4">
+      <div class="hero__table">
+        <div class="footer__table py-4">
+          <div
+            class="footer__up d-flex flex-wrap justify-content-center flex-md-row flex-column justify-content-md-around">
+            <p><strong>Nombre:</strong> Enzo Bustamante</p>
+            <p><strong>Domicilio:</strong> Calle ficticia 123</p>
+            <p><strong>Localidad:</strong> La Colonia</p>
+            <p><strong>N°Cuenta:</strong> 00000000000</p>
+          </div>
+
+          <div class="d-flex flex-md-row flex-column justify-content-md-around">
+            <p><strong>REFERENCIAS:</strong></p>
+            <p class="badge bg-success">Facturas Pagas</p>
+            <p class="badge bg-warning">Facturas Impagas</p>
+            <p class="badge bg-primary">C/Plan de Pago</p>
+            <p class="badge bg-danger">Factura Anulada</p>
+          </div>
+        </div>
+      </div>
+
+      <table id="example" class="table table-hover" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Factura</th>
+            <th>Tarifa</th>
+            <th>Periodo</th>
+            <th>Emisión</th>
+            <th>Vencimiento</th>
+            <th>Consumo</th>
+            <th>Importe</th>
+            <th>Pago</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Tarifa A</td>
+            <td>Enero 2023</td>
+            <td>2023-01-05</td>
+            <td>2023-02-05</td>
+            <td>5000 litros</td>
+            <td>$200</td>
+            <td>2023-01-20</td>
+            <td>
+              <button class="btn btn-primary">
+                <a href="assets/pdf/programacion1.pdf" target="_blank">Ver</a>
+              </button>
+              <button class="btn btn-success">
+                <a download="imagen" href="assets/pdf/programacion1.pdf">Descargar</a>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Tarifa B</td>
+            <td>Febrero 2023</td>
+            <td>2023-02-05</td>
+            <td>2023-03-05</td>
+            <td>6000 litros</td>
+            <td></td>
+            <td>2023-02-15</td>
+            <td>
+              <button class="btn btn-primary">
+                <a href="assets/pdf/programacion1.pdf" target="_blank">Ver</a>
+              </button>
+              <button class="btn btn-success">
+                <a download="" href="assets/pdf/programacion1.pdf">Descargar</a>
+              </button>
+            </td>
+          </tr>
+          <!-- Agrega más filas de facturas aquí -->
+          <tr>
+            <td>3</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">
+                <a href="assets/pdf/programacion1.pdf" target="_blank">Ver</a>
+              </button>
+              <button class="btn btn-success">
+                <a download="" href="assets/pdf/programacion1.pdf">Descargar</a>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Tarifa A</td>
+            <td>Abril 2023</td>
+            <td>2023-04-05</td>
+            <td>2023-06-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">
+                <a href="assets/pdf/programacion1.pdf" target="_blank">Ver</a>
+              </button>
+              <button class="btn btn-success">
+                <a download="" href="assets/pdf/programacion1.pdf">Descargar</a>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Tarifa C</td>
+            <td>Mayo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>2244 litros</td>
+            <td>$220</td>
+            <td></td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Tarifa B</td>
+            <td>Junio 2023</td>
+            <td>2023-06-05</td>
+            <td>2023-07-05</td>
+            <td>2222 litros</td>
+            <td>$333</td>
+            <td>2023-06-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>Tarifa A</td>
+            <td>Julio 2023</td>
+            <td>2023-08-05</td>
+            <td>2023-01-05</td>
+            <td>4456 litros</td>
+            <td>$199</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td>Tarifa B</td>
+            <td>Agosto 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>1120 litros</td>
+            <td>$258</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>Tarifa C</td>
+            <td>Septiembre 2023</td>
+            <td>2023-09-05</td>
+            <td>2023-10-05</td>
+            <td>5000 litros</td>
+            <td>$321</td>
+            <td>2023-10-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Tarifa B</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr class="table-info">
+            <td>10</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td>Tarifa A</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Tarifa B</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>Tarifa A</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td>Tarifa A</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td>Tarifa B</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>20</td>
+            <td>Tarifa A</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>21</td>
+            <td>Tarifa B</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td>Tarifa A</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td>Tarifa B</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5500 litros</td>
+            <td>$220</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>27</td>
+            <td>Tarifa A</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>164 litros</td>
+            <td>$252</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td>Tarifa A</td>
+            <td>Diciembre 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>256 litros</td>
+            <td>$852</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td>Tarifa B</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>125 litros</td>
+            <td>$111</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td>Tarifa B</td>
+            <td>Octubre 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>8000 litros</td>
+            <td>$800</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>31</td>
+            <td>Tarifa A</td>
+            <td>Noviembre 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>5222 litros</td>
+            <td>$123</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td>Tarifa C</td>
+            <td>Marzo 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>1556 litros</td>
+            <td>$100</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td>Tarifa A</td>
+            <td>Abril 2023</td>
+            <td>2023-03-05</td>
+            <td>2023-04-05</td>
+            <td>1120 litros</td>
+            <td>$251</td>
+            <td>2023-03-20</td>
+            <td>
+              <button class="btn btn-primary">Ver</button>
+              <button class="btn btn-success">Descargar</button>
+            </td>
+          </tr>
+
+          <!-- Agrega más filas de facturas aquí -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <th>Factura</th>
+            <th>Tarifa</th>
+            <th>Periodo</th>
+            <th>Emisión</th>
+            <th>Vencimiento</th>
+            <th>Consumo</th>
+            <th>Importe</th>
+            <th>Pago</th>
+            <th>Acciones</th>
+          </tr>
+        </tfoot>
+      </table>
+      <a class="btn btn-primary" href="#"><strong>Pagar</strong></a>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+      <div class="container__footer">
+        <div class="box__footer">
+          <div class="logo">
+            <img src="assets/images/water_drop_sky.svg" alt="logo" />
+          </div>
+          <div class="terms">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum
+            reiciendis et quasi aut facere vitae vero. Inventore, minus ab
+            voluptate modi repellat, pariatur tempora quisquam, debitis
+            facilis explicabo voluptatem. A.
+          </div>
+        </div>
+
+        <div class="box__footer">
+          <h2>Dirección</h2>
+          <a href="#">Provincia: Mendoza</a>
+          <a href="#">Departamento: Rivadavia</a>
+          <a href="#">Distrito: Santa María de Oro</a>
+          <a href="#">Calle: Villanueva</a>
+        </div>
+
+        <div class="box__footer">
+          <h2>Compañia</h2>
+          <a href="#">Acerca de</a>
+          <a href="#">Trabajos</a>
+          <a href="./FAQ.html">Preguntas frecuentes</a>
+          <a href="info.html">Servicios</a>
+        </div>
+
+        <div class="box__footer">
+          <h2>Redes Sociales</h2>
+          <a href="#"><i class="fab fa-facebook-square"></i> Facebook</a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i> X</a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
+          <a href="#"><i class="fab fa-instagram-square"></i> Instagram</a>
+        </div>
+      </div>
+
+      <div class="box__copyright">
+        <hr />
+        <p>Todos los derechos reservados © 2023 <b>LucraCompany</b></p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Button Top -->
+  <a class="btn btn-primary px-3 back-to-top" style="display: none;">
+    <i class="fa fa-angle-double-up"></i>
+  </a>
+
+  <!-- Whatsapp -->
+  <a target="_blank" href="https://wa.me/542615881975/?text=Hola!+tengo+una+consulta...">
+    <div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_mobile style-2 ht_ctc_animation no-animations" id="ht-ctc-chat"
+      style="position: fixed; bottom: 15px; left: 15px; cursor: pointer; z-index: 99999999;">
+      <div class="ht_ctc_style ht_ctc_chat_style">
+        <div style="display: flex; justify-content: center; align-items: center;  " class="ctc-analytics">
+          <svg style="pointer-events:none; display:block; height:50px; width:50px;" width="50px" height="50px"
+            viewBox="0 0 1024 1024">
+            <defs>
+              <path id="htwasqicona-chat"
+                d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z">
+              </path>
+            </defs>
+            <linearGradient id="htwasqiconb-chat" gradientUnits="userSpaceOnUse" x1="512.001" y1=".978" x2="512.001"
+              y2="1025.023">
+              <stop offset="0" stop-color="#61fd7d"></stop>
+              <stop offset="1" stop-color="#2bb826"></stop>
+            </linearGradient>
+            <use xlink:href="#htwasqicona-chat" overflow="visible" style="fill: url(#htwasqiconb-chat)"
+              fill="url(#htwasqiconb-chat)"></use>
+            <g>
+              <path style="fill: #FFFFFF;" fill="#FFF"
+                d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <script src="assets/js/index.js"></script>
+  <!--datatable -->
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+  <script
+    src="https://cdn.datatables.net/v/bs5/dt-1.13.6/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/r-2.5.0/datatables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#example").dataTable({
+        responsive: true,
+        dom: "Bfrtip",
+        language: {
+          url: "//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json",
+        },
+        buttons: [
+          {
+            extend: "copy",
+            text: "Copiar", // Cambia el nombre del botón a "Copiar"
+            className: "btn btn-warning", // Cambia el color del botón de copiar a azul
+          },
+          {
+            extend: "print",
+            text: "Imprimir", // Cambia el nombre del botón a "Imprimir"
+            className: "btn btn-success", // Cambia el color del botón de impresión a verde
+          },
+          {
+            extend: "pdf",
+            text: "PDF", // Cambia el nombre del botón a "PDF"
+            className: "btn btn-danger",
+          },
+        ],
+      });
+    });
+
+    $(document).ready(function () {
+      // Itera a través de todas las filas (tr) de la tabla
+      $("table tbody tr").each(function () {
+        // Encuentra todos los td en la fila actual
+        var tds = $(this).find("td");
+
+        // Variable para rastrear si todas las celdas están llenas
+        var todasLasCeldasLlenas = true;
+
+        // Itera a través de los td
+        tds.each(function () {
+          // Verifica si el td está vacío o contiene solo espacios en blanco
+          if ($(this).text().trim() === "") {
+            // Marca que al menos una celda no está llena
+            todasLasCeldasLlenas = false;
+            return false; // Sale del bucle each() de los td
+          }
+        });
+
+        // Si todas las celdas están llenas, agrega la clase 'table-warning' a la fila (tr) actual
+        if (todasLasCeldasLlenas) {
+          $(this).addClass("table-info");
+        } else {
+          $(this).addClass("table-warning");
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
