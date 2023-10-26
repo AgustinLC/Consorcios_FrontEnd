@@ -803,12 +803,10 @@ td button a {
         z-index: 10;
     }
 
-    
 
     .move_nav{
         height: 100vh;
         width: 100%;
-        overflow: hidden;
     }
 
     nav ul{
@@ -821,6 +819,7 @@ td button a {
         height: 70vh;
         color: #EFF3F5;
     }
+
 
     header .logo p {
         position: sticky ; 
