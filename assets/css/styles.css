@@ -99,7 +99,7 @@ nav ul li a{
 }
 
 .nav_mod a{
-    color: #373737;
+    color: #EFF3F5;
 }
 
 .nav_mod .select{
@@ -363,7 +363,7 @@ nav ul li a{
         background: #2196f3;
         position: fixed;
         top: 0;
-        right: -180px;
+        right: -800px;
         padding: 0px 40px;
         transition: all 300ms;
     }
@@ -807,15 +807,36 @@ td button a {
 
     .move_nav{
         right: 0px;
+        padding: 0;
+        height: 100vh;
+        width: 45%;
     }
 
     nav ul{
+        display: flex;
         flex-direction: column;
+        gap: 2px;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        height: 70vh;
+        color: #EFF3F5;
     }
 
-    nav ul li{
-        margin: 20px 0px 20px -28px;
+    header .logo p {
+        position: sticky ; 
     }
+    .index {
+        height: 84%;
+    }
+
+    .cover h1 {
+        font-size: 50px;
+    }
+    .cover h2{
+        font-size: 50px;
+    }
+
   }
   
 
